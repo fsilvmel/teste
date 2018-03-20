@@ -8,12 +8,7 @@
 
 import Foundation
 
-protocol StoryViewModelProtocol {
-    func removeCurrentStory()
-    func loadCurrentStory() -> [Frame]?
-}
-
-final class StoryViewModel: StoryViewModelProtocol {
+final class StoryViewModel {
     func removeCurrentStory() {
         RemoteDataBase.removeCurrentStory()
     }

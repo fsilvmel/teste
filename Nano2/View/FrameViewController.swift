@@ -18,8 +18,7 @@ final class FrameViewController: BaseMVVMViewController, BaseMVVMViewControllerP
     @IBOutlet weak var pictureText: UITextField!
     
     // ViewModel
-    typealias MVVMProtocol = FrameViewModelProtocol
-    var viewModel: MVVMProtocol!
+    var viewModel: FrameViewModel!
     
     // Variables
     private var imagePicker: UIImagePickerController!
@@ -47,10 +46,16 @@ final class FrameViewController: BaseMVVMViewController, BaseMVVMViewControllerP
     }
     
     private func setup() {
-        viewModel = FrameViewModel(image: pictureImage.image!, text: pictureText.text!)
+        viewModel = FrameViewModel()
+        setupBindings()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    private func setupBindings() {
+        pictureImage.bind(with: viewModel.image)
+        pictureText.bind(with: viewModel.text)
     }
 }
 
@@ -60,8 +65,7 @@ extension FrameViewController: UIImagePickerControllerDelegate {
         self.imagePicker.dismiss(animated: true, completion: nil)
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            pictureImage.image = image
-            viewModel.setFrameImage(image: image)
+            viewModel.setImage(image: image)
         }
     }
     
@@ -75,12 +79,6 @@ extension FrameViewController: UITextFieldDelegate {
         
         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= LIMIT_LENGTH
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        if let text = textField.text {
-            viewModel.setFrameText(text: text)
-        }
     }
 }
 

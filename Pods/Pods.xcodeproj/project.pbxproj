@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019C0ED43B6B0154DE9E8D6EC55F69B3 /* BlockBasedSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 18BB8BF5D5921DEF2B528507CFC85B8B /* BlockBasedSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26A92122DEC9732C3F7E91E34AF5CCC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		5E71FC96234536E1ACF66FC2AD05C447 /* NSObject+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C28DB4276D47CAF879DCF09D37B95 /* NSObject+Observable.swift */; };
+		652225B9E923CD960A5BC183267EEB28 /* BlockBasedSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BBCC6A6FEBF57172CB52CB273A683 /* BlockBasedSelector.swift */; };
+		7136AFA17078967BDD782678705D66F6 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A1B8B884446F282A9951F3CA2CBCF /* Bindable.swift */; };
+		8D3CC882FC2BB8C4874D671A8DB74B01 /* Pods-Nano2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90392F17B11164FD5CA59252AE8B86CC /* Pods-Nano2-dummy.m */; };
+		9967C7E9625D5C7D807D95E54DD2BEA5 /* SimpleTwoWayBindings-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 37216541AA5E6B14EC480E218BFFD40C /* SimpleTwoWayBindings-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B5BAFC735AE49B8DF125103FA3068BE /* UIControls+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986B23520DDCDA1D583D6C531975B134 /* UIControls+Bindable.swift */; };
+		C15D098DF53B16F430FC945DB832CBFA /* SimpleTwoWayBinding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25E00B9409824F624246C06669666465 /* SimpleTwoWayBinding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2804D436C6C8402F417E89DD702EC30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		C358893C3E6E7A87B3CA4AC03E262395 /* SimpleTwoWayBinding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A941A691443BAA8DC49BB5876B3C9845 /* SimpleTwoWayBinding-dummy.m */; };
+		CD98135868C10D3400ECA34B4A177A4E /* Pods-Nano2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E41551B8D44AA7306FB3982C8238A6 /* Pods-Nano2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E918BF737A22DF51516B22647C69F35B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FA1C9A66D76290561A57574207A631 /* Observable.swift */; };
+		F0EE30D760E26677CE8175C4034B6910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		FF93BD2C1EC5B40BE885E0DC8ABB12B1 /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D064A49BAE8835D88B443B85D66927D /* BlockBasedSelector.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10199353E2965FC72A2E33A8E681DD98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70A6CE34E808D920408630A92F07E427;
+			remoteInfo = SimpleTwoWayBinding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0126F42C080DF5CB060478263D7D5A5C /* SimpleTwoWayBinding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleTwoWayBinding-prefix.pch"; sourceTree = "<group>"; };
+		11038234C6C0F3F12768FA42D1CE3FB2 /* Pods-Nano2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nano2-acknowledgements.markdown"; sourceTree = "<group>"; };
+		124C28DB4276D47CAF879DCF09D37B95 /* NSObject+Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Observable.swift"; path = "Sources/NSObject+Observable.swift"; sourceTree = "<group>"; };
+		16FD66AB5700C9EA4E059762E2EC75C0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BB8BF5D5921DEF2B528507CFC85B8B /* BlockBasedSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlockBasedSelector.h; path = Sources/BlockBasedSelector/BlockBasedSelector.h; sourceTree = "<group>"; };
+		225A1B8B884446F282A9951F3CA2CBCF /* Bindable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bindable.swift; path = Sources/Bindable.swift; sourceTree = "<group>"; };
+		25E00B9409824F624246C06669666465 /* SimpleTwoWayBinding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleTwoWayBinding-umbrella.h"; sourceTree = "<group>"; };
+		33FA1C9A66D76290561A57574207A631 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = Sources/Observable.swift; sourceTree = "<group>"; };
+		37216541AA5E6B14EC480E218BFFD40C /* SimpleTwoWayBindings-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SimpleTwoWayBindings-Bridging-Header.h"; path = "Sources/SimpleTwoWayBindings-Bridging-Header.h"; sourceTree = "<group>"; };
+		48FC3C0EC3D0F0F041FB58E04E55DEED /* Pods-Nano2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nano2-acknowledgements.plist"; sourceTree = "<group>"; };
+		4B2A1273A07BBBD4926ABAEDA860B446 /* SimpleTwoWayBinding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleTwoWayBinding.xcconfig; sourceTree = "<group>"; };
+		4FA273D51AAC006F9D020AD8A349593A /* Pods_Nano2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Nano2.framework; path = "Pods-Nano2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E3BD9D00568093077AF9A314E680B8 /* SimpleTwoWayBinding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleTwoWayBinding.modulemap; sourceTree = "<group>"; };
+		6D064A49BAE8835D88B443B85D66927D /* BlockBasedSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BlockBasedSelector.m; path = Sources/BlockBasedSelector/BlockBasedSelector.m; sourceTree = "<group>"; };
+		791BBCC6A6FEBF57172CB52CB273A683 /* BlockBasedSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockBasedSelector.swift; path = Sources/BlockBasedSelector/BlockBasedSelector.swift; sourceTree = "<group>"; };
+		82E789D1A83A060763E2C021E0BC173C /* Pods-Nano2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nano2.release.xcconfig"; sourceTree = "<group>"; };
+		8F9E4961BDCFCEAC5C1017DC7FFDEE29 /* Pods-Nano2-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nano2-frameworks.sh"; sourceTree = "<group>"; };
+		90392F17B11164FD5CA59252AE8B86CC /* Pods-Nano2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nano2-dummy.m"; sourceTree = "<group>"; };
+		90F1E6E2C0AF5AB82963C332F4F25DA9 /* Pods-Nano2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nano2-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		986B23520DDCDA1D583D6C531975B134 /* UIControls+Bindable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControls+Bindable.swift"; path = "Sources/UIControls+Bindable.swift"; sourceTree = "<group>"; };
+		A941A691443BAA8DC49BB5876B3C9845 /* SimpleTwoWayBinding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleTwoWayBinding-dummy.m"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B7E805AF8207D88C82D3E8DE3C366D81 /* SimpleTwoWayBinding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleTwoWayBinding.framework; path = SimpleTwoWayBinding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74FC548D0C61290C532EB576E6CFDA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E41551B8D44AA7306FB3982C8238A6 /* Pods-Nano2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nano2-umbrella.h"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DBA3D4A36DD56A54D71974A88D4AB96C /* Pods-Nano2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Nano2.modulemap"; sourceTree = "<group>"; };
+		F0E915C3FE464C5F2BCEA7D32CF7BD3A /* Pods-Nano2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nano2.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		882DF00BDFD1BDB33501644B154877E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0EE30D760E26677CE8175C4034B6910 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE7D4F090E1D858A508C84D9F447A6FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A92122DEC9732C3F7E91E34AF5CCC4 /* Foundation.framework in Frameworks */,
+				C2804D436C6C8402F417E89DD702EC30 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25102C1B392F469D494C65E3DA333819 /* SimpleTwoWayBinding */ = {
+			isa = PBXGroup;
+			children = (
+				225A1B8B884446F282A9951F3CA2CBCF /* Bindable.swift */,
+				18BB8BF5D5921DEF2B528507CFC85B8B /* BlockBasedSelector.h */,
+				6D064A49BAE8835D88B443B85D66927D /* BlockBasedSelector.m */,
+				791BBCC6A6FEBF57172CB52CB273A683 /* BlockBasedSelector.swift */,
+				124C28DB4276D47CAF879DCF09D37B95 /* NSObject+Observable.swift */,
+				33FA1C9A66D76290561A57574207A631 /* Observable.swift */,
+				37216541AA5E6B14EC480E218BFFD40C /* SimpleTwoWayBindings-Bridging-Header.h */,
+				986B23520DDCDA1D583D6C531975B134 /* UIControls+Bindable.swift */,
+				E465C56577EDAB9DA4FA8AF12579864A /* Support Files */,
+			);
+			name = SimpleTwoWayBinding;
+			path = SimpleTwoWayBinding;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4F3A66AFD1E7357ED50455C4206F76C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FA273D51AAC006F9D020AD8A349593A /* Pods_Nano2.framework */,
+				B7E805AF8207D88C82D3E8DE3C366D81 /* SimpleTwoWayBinding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F4F106F8E117E2CB2B222446DEEDE3C8 /* Pods */,
+				4F3A66AFD1E7357ED50455C4206F76C7 /* Products */,
+				8B24546B818E8987E3AC0E7D11944AE5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8109FBA57B064803CE29DB760C854B54 /* Pods-Nano2 */ = {
+			isa = PBXGroup;
+			children = (
+				16FD66AB5700C9EA4E059762E2EC75C0 /* Info.plist */,
+				DBA3D4A36DD56A54D71974A88D4AB96C /* Pods-Nano2.modulemap */,
+				11038234C6C0F3F12768FA42D1CE3FB2 /* Pods-Nano2-acknowledgements.markdown */,
+				48FC3C0EC3D0F0F041FB58E04E55DEED /* Pods-Nano2-acknowledgements.plist */,
+				90392F17B11164FD5CA59252AE8B86CC /* Pods-Nano2-dummy.m */,
+				8F9E4961BDCFCEAC5C1017DC7FFDEE29 /* Pods-Nano2-frameworks.sh */,
+				90F1E6E2C0AF5AB82963C332F4F25DA9 /* Pods-Nano2-resources.sh */,
+				C8E41551B8D44AA7306FB3982C8238A6 /* Pods-Nano2-umbrella.h */,
+				F0E915C3FE464C5F2BCEA7D32CF7BD3A /* Pods-Nano2.debug.xcconfig */,
+				82E789D1A83A060763E2C021E0BC173C /* Pods-Nano2.release.xcconfig */,
+			);
+			name = "Pods-Nano2";
+			path = "Target Support Files/Pods-Nano2";
+			sourceTree = "<group>";
+		};
+		8B24546B818E8987E3AC0E7D11944AE5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8109FBA57B064803CE29DB760C854B54 /* Pods-Nano2 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E465C56577EDAB9DA4FA8AF12579864A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C74FC548D0C61290C532EB576E6CFDA8 /* Info.plist */,
+				66E3BD9D00568093077AF9A314E680B8 /* SimpleTwoWayBinding.modulemap */,
+				4B2A1273A07BBBD4926ABAEDA860B446 /* SimpleTwoWayBinding.xcconfig */,
+				A941A691443BAA8DC49BB5876B3C9845 /* SimpleTwoWayBinding-dummy.m */,
+				0126F42C080DF5CB060478263D7D5A5C /* SimpleTwoWayBinding-prefix.pch */,
+				25E00B9409824F624246C06669666465 /* SimpleTwoWayBinding-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimpleTwoWayBinding";
+			sourceTree = "<group>";
+		};
+		F4F106F8E117E2CB2B222446DEEDE3C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25102C1B392F469D494C65E3DA333819 /* SimpleTwoWayBinding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		411718CB3AD34F4DEF4C38B703ABC816 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD98135868C10D3400ECA34B4A177A4E /* Pods-Nano2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8EA7394D6328B8F2191F5047F68C259 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019C0ED43B6B0154DE9E8D6EC55F69B3 /* BlockBasedSelector.h in Headers */,
+				C15D098DF53B16F430FC945DB832CBFA /* SimpleTwoWayBinding-umbrella.h in Headers */,
+				9967C7E9625D5C7D807D95E54DD2BEA5 /* SimpleTwoWayBindings-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		305B28D74B684930B48C973D79A5C8BA /* Pods-Nano2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07DCA5040D5AB1A75EE00095449CBFA9 /* Build configuration list for PBXNativeTarget "Pods-Nano2" */;
+			buildPhases = (
+				8E79F5ED9C92A7B933D52621BC799FF3 /* Sources */,
+				882DF00BDFD1BDB33501644B154877E2 /* Frameworks */,
+				411718CB3AD34F4DEF4C38B703ABC816 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48E333E4867B8A53A1DB7250DC19A216 /* PBXTargetDependency */,
+			);
+			name = "Pods-Nano2";
+			productName = "Pods-Nano2";
+			productReference = 4FA273D51AAC006F9D020AD8A349593A /* Pods_Nano2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		70A6CE34E808D920408630A92F07E427 /* SimpleTwoWayBinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B16745F4E30F45D20DA80140BB5FC89C /* Build configuration list for PBXNativeTarget "SimpleTwoWayBinding" */;
+			buildPhases = (
+				87E396ED68594542D4DDC386C5378DC5 /* Sources */,
+				BE7D4F090E1D858A508C84D9F447A6FE /* Frameworks */,
+				C8EA7394D6328B8F2191F5047F68C259 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTwoWayBinding;
+			productName = SimpleTwoWayBinding;
+			productReference = B7E805AF8207D88C82D3E8DE3C366D81 /* SimpleTwoWayBinding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4F3A66AFD1E7357ED50455C4206F76C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305B28D74B684930B48C973D79A5C8BA /* Pods-Nano2 */,
+				70A6CE34E808D920408630A92F07E427 /* SimpleTwoWayBinding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87E396ED68594542D4DDC386C5378DC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7136AFA17078967BDD782678705D66F6 /* Bindable.swift in Sources */,
+				FF93BD2C1EC5B40BE885E0DC8ABB12B1 /* BlockBasedSelector.m in Sources */,
+				652225B9E923CD960A5BC183267EEB28 /* BlockBasedSelector.swift in Sources */,
+				5E71FC96234536E1ACF66FC2AD05C447 /* NSObject+Observable.swift in Sources */,
+				E918BF737A22DF51516B22647C69F35B /* Observable.swift in Sources */,
+				C358893C3E6E7A87B3CA4AC03E262395 /* SimpleTwoWayBinding-dummy.m in Sources */,
+				9B5BAFC735AE49B8DF125103FA3068BE /* UIControls+Bindable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E79F5ED9C92A7B933D52621BC799FF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3CC882FC2BB8C4874D671A8DB74B01 /* Pods-Nano2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48E333E4867B8A53A1DB7250DC19A216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleTwoWayBinding;
+			target = 70A6CE34E808D920408630A92F07E427 /* SimpleTwoWayBinding */;
+			targetProxy = 10199353E2965FC72A2E33A8E681DD98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A9E2A48D6E5D1A6B79A7876D09B19B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B2A1273A07BBBD4926ABAEDA860B446 /* SimpleTwoWayBinding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleTwoWayBinding/SimpleTwoWayBinding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleTwoWayBinding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleTwoWayBinding/SimpleTwoWayBinding.modulemap";
+				PRODUCT_NAME = SimpleTwoWayBinding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		11A9AABF6B28EA4C4A62811D40E6B96F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E915C3FE464C5F2BCEA7D32CF7BD3A /* Pods-Nano2.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Nano2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Nano2/Pods-Nano2.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Nano2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A49BCA9D9B40236068EA46408D689F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E789D1A83A060763E2C021E0BC173C /* Pods-Nano2.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Nano2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Nano2/Pods-Nano2.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Nano2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA33F186435244FD0FD5B7325332656C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CACD2C7714D610628DD1FAC8423A1002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B2A1273A07BBBD4926ABAEDA860B446 /* SimpleTwoWayBinding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleTwoWayBinding/SimpleTwoWayBinding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleTwoWayBinding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleTwoWayBinding/SimpleTwoWayBinding.modulemap";
+				PRODUCT_NAME = SimpleTwoWayBinding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07DCA5040D5AB1A75EE00095449CBFA9 /* Build configuration list for PBXNativeTarget "Pods-Nano2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11A9AABF6B28EA4C4A62811D40E6B96F /* Debug */,
+				A49BCA9D9B40236068EA46408D689F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323A24856F1A4871A780301AF5C02A2A /* Debug */,
+				CA33F186435244FD0FD5B7325332656C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B16745F4E30F45D20DA80140BB5FC89C /* Build configuration list for PBXNativeTarget "SimpleTwoWayBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACD2C7714D610628DD1FAC8423A1002 /* Debug */,
+				0A9E2A48D6E5D1A6B79A7876D09B19B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

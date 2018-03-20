@@ -17,8 +17,7 @@ final class StoryViewController: BaseMVVMViewController, BaseMVVMViewControllerP
     let EMPTY_NAME = "Please give a name to your new story!"
     
     // ViewModel
-    typealias MVVMProtocol = StoryViewModelProtocol
-    var viewModel: MVVMProtocol!
+    var viewModel: StoryViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

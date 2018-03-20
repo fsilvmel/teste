@@ -8,11 +8,7 @@
 
 import Foundation
 
-protocol ReadStoryViewModelProtocol {
-    var story: [Frame]! { get }
-}
-
-final class ReadStoryViewModel: ReadStoryViewModelProtocol {
+final class ReadStoryViewModel {
     var story: [Frame]!
     
     init() {

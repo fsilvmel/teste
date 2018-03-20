@@ -27,12 +27,19 @@
 		BC873B1D2061425D000BAF4C /* BaseMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B1C2061425D000BAF4C /* BaseMVVMViewController.swift */; };
 		BC873B1F20614864000BAF4C /* FrameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B1E20614864000BAF4C /* FrameViewModel.swift */; };
 		BC873B2120614B8D000BAF4C /* ReadStoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B2020614B8D000BAF4C /* ReadStoryViewModel.swift */; };
+		BC873B2320615E7F000BAF4C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B2220615E7F000BAF4C /* Observable.swift */; };
+		BC873B2520615EA8000BAF4C /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B2420615EA8000BAF4C /* Bindable.swift */; };
+		BC873B282061AEDD000BAF4C /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B272061AEDD000BAF4C /* UIImage+Extensions.swift */; };
 		BCBE26F72024BF170069D148 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F62024BF170069D148 /* Story.swift */; };
 		BCBE26FA2024C8320069D148 /* RemoteDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F92024C8320069D148 /* RemoteDataBase.swift */; };
 		BCBE26FC2024DB690069D148 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26FB2024DB690069D148 /* ModalController.swift */; };
+		E0006EFD7730672F87D44D04 /* Pods_Nano2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F9E65BCD3B66B6567A1D37 /* Pods_Nano2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56F9E65BCD3B66B6567A1D37 /* Pods_Nano2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nano2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9269AB98E0C1848D32D5F44B /* Pods-Nano2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nano2/Pods-Nano2.release.xcconfig"; sourceTree = "<group>"; };
+		BBD4BCCC0ACBA3FE3FF7093D /* Pods-Nano2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nano2/Pods-Nano2.debug.xcconfig"; sourceTree = "<group>"; };
 		BC31ED3320286FF100727D5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC7EE4B1201F9DC000492F1B /* Nano2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7EE4B4201F9DC000492F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +62,9 @@
 		BC873B1C2061425D000BAF4C /* BaseMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMViewController.swift; sourceTree = "<group>"; };
 		BC873B1E20614864000BAF4C /* FrameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameViewModel.swift; sourceTree = "<group>"; };
 		BC873B2020614B8D000BAF4C /* ReadStoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadStoryViewModel.swift; sourceTree = "<group>"; };
+		BC873B2220615E7F000BAF4C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		BC873B2420615EA8000BAF4C /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		BC873B272061AEDD000BAF4C /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		BCBE26F62024BF170069D148 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		BCBE26F92024C8320069D148 /* RemoteDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataBase.swift; sourceTree = "<group>"; };
 		BCBE26FB2024DB690069D148 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
@@ -65,17 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0006EFD7730672F87D44D04 /* Pods_Nano2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F1C773C1D9CE85B7C37F3CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBD4BCCC0ACBA3FE3FF7093D /* Pods-Nano2.debug.xcconfig */,
+				9269AB98E0C1848D32D5F44B /* Pods-Nano2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79FFB4D41C9ACBFBB8E3F2DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56F9E65BCD3B66B6567A1D37 /* Pods_Nano2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC7EE4A8201F9DC000492F1B = {
 			isa = PBXGroup;
 			children = (
 				BC7EE4B3201F9DC000492F1B /* Nano2 */,
 				BC7EE4B2201F9DC000492F1B /* Products */,
+				5F1C773C1D9CE85B7C37F3CC /* Pods */,
+				79FFB4D41C9ACBFBB8E3F2DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +123,6 @@
 				BC873B162061409D000BAF4C /* Base */,
 				BC873B1120612A97000BAF4C /* ViewModel */,
 				BCBE26F82024C8180069D148 /* Utils */,
-				BC7EE4C82020B70700492F1B /* Controller */,
 				BC7EE4C72020B70300492F1B /* View */,
 				BC7EE4C62020B6FE00492F1B /* Model */,
 				BC7EE4B4201F9DC000492F1B /* AppDelegate.swift */,
@@ -117,6 +146,7 @@
 		BC7EE4C72020B70300492F1B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC7EE4D32020E67F00492F1B /* ReadStoryViewController.swift */,
 				BC7EE4CF2020DAA600492F1B /* FrameViewController.swift */,
 				BC7EE4D52020F05E00492F1B /* ReadStoryCell.swift */,
 				BC7EE4CB2020C7C100492F1B /* LibraryCell.swift */,
@@ -126,14 +156,6 @@
 				BC7EE4CD2020D0B100492F1B /* PermissionViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BC7EE4C82020B70700492F1B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BC7EE4D32020E67F00492F1B /* ReadStoryViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		BC873B1120612A97000BAF4C /* ViewModel */ = {
@@ -150,6 +172,7 @@
 		BC873B162061409D000BAF4C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BC873B262061AEBA000BAF4C /* Extensions */,
 				BC873B1B20614239000BAF4C /* View */,
 			);
 			path = Base;
@@ -165,11 +188,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC873B262061AEBA000BAF4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC873B272061AEDD000BAF4C /* UIImage+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BCBE26F82024C8180069D148 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				BCBE26F92024C8320069D148 /* RemoteDataBase.swift */,
 				BCBE26FB2024DB690069D148 /* ModalController.swift */,
+				BC873B2220615E7F000BAF4C /* Observable.swift */,
+				BC873B2420615EA8000BAF4C /* Bindable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -181,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC7EE4C3201F9DC000492F1B /* Build configuration list for PBXNativeTarget "Nano2" */;
 			buildPhases = (
+				3A38628A8A10AEB61812055E /* [CP] Check Pods Manifest.lock */,
 				BC7EE4AD201F9DC000492F1B /* Sources */,
 				BC7EE4AE201F9DC000492F1B /* Frameworks */,
 				BC7EE4AF201F9DC000492F1B /* Resources */,
+				41F76E5DAD41C01164C67C25 /* [CP] Embed Pods Frameworks */,
+				EEF872842CDB676454902653 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +277,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A38628A8A10AEB61812055E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nano2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41F76E5DAD41C01164C67C25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nano2/Pods-Nano2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SimpleTwoWayBinding/SimpleTwoWayBinding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleTwoWayBinding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nano2/Pods-Nano2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF872842CDB676454902653 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nano2/Pods-Nano2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC7EE4AD201F9DC000492F1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -250,16 +340,19 @@
 				BC7EE4D02020DAA600492F1B /* FrameViewController.swift in Sources */,
 				BCBE26FC2024DB690069D148 /* ModalController.swift in Sources */,
 				BC7EE4CA2020B73E00492F1B /* StoryViewController.swift in Sources */,
+				BC873B2520615EA8000BAF4C /* Bindable.swift in Sources */,
 				BC873B1520613E72000BAF4C /* StoryViewModel.swift in Sources */,
 				BC7EE4D62020F05E00492F1B /* ReadStoryCell.swift in Sources */,
 				BCBE26FA2024C8320069D148 /* RemoteDataBase.swift in Sources */,
 				BC7EE4CC2020C7C100492F1B /* LibraryCell.swift in Sources */,
 				BC7EE4B7201F9DC000492F1B /* ViewController.swift in Sources */,
 				BC7EE4D42020E67F00492F1B /* ReadStoryViewController.swift in Sources */,
+				BC873B2320615E7F000BAF4C /* Observable.swift in Sources */,
 				BC7EE4D22020DCDC00492F1B /* Frame.swift in Sources */,
 				BC7EE4B5201F9DC000492F1B /* AppDelegate.swift in Sources */,
 				BC7EE4CE2020D0B100492F1B /* PermissionViewController.swift in Sources */,
 				BC873B1A2061415A000BAF4C /* BaseViewModelProtocol.swift in Sources */,
+				BC873B282061AEDD000BAF4C /* UIImage+Extensions.swift in Sources */,
 				BC873B1D2061425D000BAF4C /* BaseMVVMViewController.swift in Sources */,
 				BC31ED3420286FF100727D5F /* HomeViewController.swift in Sources */,
 				BC873B18206140DF000BAF4C /* BaseViewController.swift in Sources */,
@@ -400,6 +493,7 @@
 		};
 		BC7EE4C4201F9DC000492F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD4BCCC0ACBA3FE3FF7093D /* Pods-Nano2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -415,6 +509,7 @@
 		};
 		BC7EE4C5201F9DC000492F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9269AB98E0C1848D32D5F44B /* Pods-Nano2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

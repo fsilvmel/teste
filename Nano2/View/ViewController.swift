@@ -19,15 +19,7 @@ final class ViewController: BaseMVVMViewController, BaseMVVMViewControllerProtoc
     @IBOutlet weak var tableView: UITableView!
     
     // ViewModel
-    typealias MVVMProtocol = ViewModelProtocol
-    var viewModel: MVVMProtocol! {
-        didSet {
-            viewModel.storiesDidChange = {
-                self.tableView.reloadData()
-                self.animateView()
-            }
-        }
-    }
+    var viewModel: ViewModel!
     
     // Variables
     var tableHeight: CGFloat!
@@ -49,7 +41,14 @@ final class ViewController: BaseMVVMViewController, BaseMVVMViewControllerProtoc
     
     private func setup() {
         viewModel = ViewModel()
+        setupBindings()
         setupTableView()
+    }
+    
+    private func setupBindings() {
+        observe(for: viewModel.stories) { [unowned self](_) in
+            self.tableView.reloadData()
+        }
     }
     
     private func animateView() {
@@ -74,7 +73,7 @@ final class ViewController: BaseMVVMViewController, BaseMVVMViewControllerProtoc
             let cell = sender as! LibraryCell
             if let indexPath = tableView.indexPath(for: cell) {
                 let vc = segue.destination as! ReadStoryViewController
-                let story =  viewModel.stories[indexPath.row]
+                let story =  viewModel.stories.value![indexPath.row]
                 vc.setup(with: story.getFrames())
             }
         }
@@ -96,13 +95,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.stories.count
+        return viewModel.stories.value!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LIBRARY_CELL, for: indexPath) as! LibraryCell
         
-        let story = viewModel.stories[indexPath.row]
+        let story = viewModel.stories.value![indexPath.row]
         cell.descriptionLabel.text = story.getName()
         cell.storyImage.image = story.getFirstImage()
         

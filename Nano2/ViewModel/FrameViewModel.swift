@@ -7,31 +7,18 @@
 //
 
 import UIKit
+import SimpleTwoWayBinding
 
-protocol FrameViewModelProtocol {
-    var frame: Frame! { get }
-    init(image: UIImage, text: String)
-    func saveFrame()
-    mutating func setFrameImage(image: UIImage)
-    mutating func setFrameText(text: String)
-}
-
-final class FrameViewModel: FrameViewModelProtocol {
-    var frame: Frame!
+final class FrameViewModel {
+    let image: Observable<UIImage> = Observable()
+    let text: Observable<String> = Observable()
     
-    init(image: UIImage, text: String) {
-        frame = Frame(image: image, text: text)
+    func setImage(image: UIImage) {
+        self.image.value = image
     }
     
     func saveFrame() {
+        let frame = Frame(image: image.value!, text: text.value!)
         RemoteDataBase.saveFrame(frame: frame)
-    }
-    
-    func setFrameImage(image: UIImage) {
-        frame.image = image
-    }
-    
-    func setFrameText(text: String) {
-        frame.text = text
     }
 }

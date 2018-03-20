@@ -7,26 +7,11 @@
 //
 
 import UIKit
+import SimpleTwoWayBinding
 
-protocol ViewModelProtocol {
-    var stories: [Story]! { get }
-    var storiesDidChange: (() -> ())? { get set }
-    
-    func updateStories()
-    func saveStories()
-    mutating func removeStory(at index: Int)
-}
-
-final class ViewModel: ViewModelProtocol {
+final class ViewModel {
     // Variables
-    var stories: [Story]! {
-        didSet {
-            storiesDidChange?()
-        }
-    }
-    
-    // Closures
-    var storiesDidChange: (() -> ())?
+    var stories: Observable<[Story]> = Observable()
     
     required init() {
         updateStories()
@@ -34,17 +19,17 @@ final class ViewModel: ViewModelProtocol {
     
     func updateStories() {
         if let stories = RemoteDataBase.loadStories() {
-            self.stories = stories
+            self.stories.value = stories
         } else {
-            self.stories = []
+            self.stories.value = []
         }
     }
     
     func saveStories() {
-        RemoteDataBase.saveStories(stories: stories)
+        RemoteDataBase.saveStories(stories: stories.value!)
     }
     
     func removeStory(at index: Int) {
-        stories.remove(at: index)
+        stories.value!.remove(at: index)
     }
 }

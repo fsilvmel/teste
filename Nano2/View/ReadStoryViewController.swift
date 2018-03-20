@@ -17,8 +17,7 @@ final class ReadStoryViewController: BaseMVVMViewController, BaseMVVMViewControl
     @IBOutlet weak var collectionView: UICollectionView!
     
     // ViewModel
-    typealias MVVMProtocol = ReadStoryViewModelProtocol
-    var viewModel: MVVMProtocol!
+    var viewModel: ReadStoryViewModel!
     
     // Variables
     var frame = 0
