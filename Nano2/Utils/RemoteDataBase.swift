@@ -1,5 +1,5 @@
 //
-//  UserStorage.swift
+//  RemoteDataBase.swift
 //  Nano2
 //
 //  Created by Felipe Melo on 2/2/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserStorage {
+class RemoteDataBase {
     
     // Statics
     static let storage = UserDefaults.standard

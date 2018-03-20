@@ -6,9 +6,10 @@
 //  Copyright © 2018 Felipe Melo. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: BaseMVVMViewController, BaseMVVMViewControllerProtocol {
 
     // Static
     let LIBRARY_CELL = "libraryCell"
@@ -17,45 +18,48 @@ class ViewController: UIViewController {
     // Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // ViewModel
+    typealias MVVMProtocol = ViewModelProtocol
+    var viewModel: MVVMProtocol! {
+        didSet {
+            viewModel.storiesDidChange = {
+                self.tableView.reloadData()
+                self.animateView()
+            }
+        }
+    }
+    
     // Variables
-    private var stories = [Story]()
-    private var tableHeight: CGFloat!
-    private var tableWidth: CGFloat!
+    var tableHeight: CGFloat!
+    var tableWidth: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.separatorStyle = .none
-        
-        self.tableHeight = self.tableView.bounds.size.height
-        self.tableWidth = self.tableView.bounds.size.width
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let stories = UserStorage.loadStories() {
-            self.stories = stories
-            self.tableView.reloadData()
-            self.animateView()
-        }
+        viewModel.updateStories()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    private func setup() {
+        viewModel = ViewModel()
+        setupTableView()
     }
     
     private func animateView() {
-        for cell in self.tableView.visibleCells {
+        for cell in tableView.visibleCells {
             let libraryCell = cell as! LibraryCell
-            libraryCell.transform = CGAffineTransform(translationX: -self.tableWidth, y: 0)
+            libraryCell.transform = CGAffineTransform(translationX: -tableWidth, y: 0)
         }
         
         var index = 0
-        for cell in self.tableView.visibleCells {
+        for cell in tableView.visibleCells {
             let libraryCell = cell as! LibraryCell
             UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
                 libraryCell.transform = CGAffineTransform.identity
@@ -70,26 +74,37 @@ class ViewController: UIViewController {
             let cell = sender as! LibraryCell
             if let indexPath = tableView.indexPath(for: cell) {
                 let vc = segue.destination as! ReadStoryViewController
-                vc.story = self.stories[indexPath.row].getFrames()
+                let story =  viewModel.stories[indexPath.row]
+                vc.setup(with: story.getFrames())
             }
         }
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        
+        tableHeight = tableView.bounds.size.height
+        tableWidth = tableView.bounds.size.width
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stories.count
+        return viewModel.stories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LIBRARY_CELL, for: indexPath) as! LibraryCell
         
-        cell.descriptionLabel.text = stories[indexPath.row].getName()
-        cell.storyImage.image = stories[indexPath.row].getFirstImage()
+        let story = viewModel.stories[indexPath.row]
+        cell.descriptionLabel.text = story.getName()
+        cell.storyImage.image = story.getFirstImage()
         
         return cell
     }
@@ -103,7 +118,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: self.LIBRARY_CELL, for: indexPath)
             self.slideOff(cell, index: indexPath.row)
             
-            UserStorage.saveStories(stories: self.stories)
+            self.viewModel.saveStories()
         }
         
         return [delete]
@@ -116,11 +131,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.alpha = 0
         })
         
-        self.stories.remove(at: index)
-        self.tableView.reloadData()
+        viewModel.removeStory(at: index)
         
         var cellIndex = 0
-        for libraryCell in self.tableView.visibleCells {
+        for libraryCell in tableView.visibleCells {
             if cellIndex >= index {
                 libraryCell.transform = CGAffineTransform(translationX: 0, y: libraryCell.bounds.size.height)
                 

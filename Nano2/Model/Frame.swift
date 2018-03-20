@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Frame: NSObject, NSCoding {
+final class Frame: NSObject, NSCoding {
     
     var image: UIImage
     var text: String
@@ -19,12 +19,12 @@ class Frame: NSObject, NSCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.image, forKey: "image")
-        aCoder.encode(self.text, forKey: "text")
+        aCoder.encode(image, forKey: "image")
+        aCoder.encode(text, forKey: "text")
     }
     
     required init(coder aDecoder: NSCoder) {
-        self.image = aDecoder.decodeObject(forKey: "image") as! UIImage
-        self.text = aDecoder.decodeObject(forKey: "text") as! String
+        image = aDecoder.decodeObject(forKey: "image") as! UIImage
+        text = aDecoder.decodeObject(forKey: "text") as! String
     }
 }

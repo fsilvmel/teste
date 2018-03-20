@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var authorLabel: UILabel!
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.animateView()
+        animateView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,16 +29,16 @@ class HomeViewController: UIViewController {
     }
     
     private func animateView() {
-        self.animateButton()
-        self.animateLabel()
+        animateButton()
+        animateLabel()
     }
     
     private func animateButton() {
-        self.animateObject(object: self.startButton, duration: 2, delay: 0)
+        animateObject(object: self.startButton, duration: 2, delay: 0)
     }
     
     private func animateLabel() {
-        self.animateObject(object: self.authorLabel, duration: 2, delay: 1)
+        animateObject(object: self.authorLabel, duration: 2, delay: 1)
     }
     
     private func animateObject(object: UIView, duration: TimeInterval, delay: TimeInterval) {

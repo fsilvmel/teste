@@ -31,11 +31,11 @@ class ModalController {
                             return
                         }
                         
-                        UserStorage.addStory(name: storyName, story: currentStory)
-                        UserStorage.removeCurrentStory()
+                        RemoteDataBase.addStory(name: storyName, story: currentStory)
+                        RemoteDataBase.removeCurrentStory()
                         
                         let vc = view.storyboard?.instantiateViewController(withIdentifier: view.READ_STORY) as! ReadStoryViewController
-                        vc.story = currentStory
+                        vc.setup(with: currentStory)
                         view.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

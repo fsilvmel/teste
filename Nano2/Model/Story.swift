@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Story: NSObject, NSCoding {
+final class Story: NSObject, NSCoding {
     
     // Private
     private var name: String!
@@ -25,11 +25,11 @@ class Story: NSObject, NSCoding {
     }
     
     func getName() -> String {
-        return self.name
+        return name
     }
     
     func getFrames() -> [Frame] {
-        return self.frames
+        return frames
     }
     
     func getFirstImage() -> UIImage {
@@ -37,12 +37,12 @@ class Story: NSObject, NSCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.name, forKey: "name")
-        aCoder.encode(self.frames, forKey: "frames")
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(frames, forKey: "frames")
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.name = aDecoder.decodeObject(forKey: "name") as! String
-        self.frames = aDecoder.decodeObject(forKey: "frames") as! [Frame]
+        name = aDecoder.decodeObject(forKey: "name") as! String
+        frames = aDecoder.decodeObject(forKey: "frames") as! [Frame]
     }
 }

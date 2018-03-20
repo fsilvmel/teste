@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 
-class PermissionViewController: UIViewController {
+final class PermissionViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

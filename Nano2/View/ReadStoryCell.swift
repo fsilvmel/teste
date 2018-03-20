@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReadStoryCell: UICollectionViewCell {
+final class ReadStoryCell: UICollectionViewCell {
     @IBOutlet weak var storyImage: UIImageView!
     @IBOutlet weak var storyText: UILabel!
 }

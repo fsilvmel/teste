@@ -20,8 +20,15 @@
 		BC7EE4D22020DCDC00492F1B /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EE4D12020DCDC00492F1B /* Frame.swift */; };
 		BC7EE4D42020E67F00492F1B /* ReadStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EE4D32020E67F00492F1B /* ReadStoryViewController.swift */; };
 		BC7EE4D62020F05E00492F1B /* ReadStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EE4D52020F05E00492F1B /* ReadStoryCell.swift */; };
+		BC873B1320612D5B000BAF4C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B1220612D5B000BAF4C /* ViewModel.swift */; };
+		BC873B1520613E72000BAF4C /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B1420613E72000BAF4C /* StoryViewModel.swift */; };
+		BC873B18206140DF000BAF4C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B17206140DF000BAF4C /* BaseViewController.swift */; };
+		BC873B1A2061415A000BAF4C /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B192061415A000BAF4C /* BaseViewModelProtocol.swift */; };
+		BC873B1D2061425D000BAF4C /* BaseMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B1C2061425D000BAF4C /* BaseMVVMViewController.swift */; };
+		BC873B1F20614864000BAF4C /* FrameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B1E20614864000BAF4C /* FrameViewModel.swift */; };
+		BC873B2120614B8D000BAF4C /* ReadStoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC873B2020614B8D000BAF4C /* ReadStoryViewModel.swift */; };
 		BCBE26F72024BF170069D148 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F62024BF170069D148 /* Story.swift */; };
-		BCBE26FA2024C8320069D148 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F92024C8320069D148 /* UserStorage.swift */; };
+		BCBE26FA2024C8320069D148 /* RemoteDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F92024C8320069D148 /* RemoteDataBase.swift */; };
 		BCBE26FC2024DB690069D148 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26FB2024DB690069D148 /* ModalController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +48,15 @@
 		BC7EE4D12020DCDC00492F1B /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		BC7EE4D32020E67F00492F1B /* ReadStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadStoryViewController.swift; sourceTree = "<group>"; };
 		BC7EE4D52020F05E00492F1B /* ReadStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadStoryCell.swift; sourceTree = "<group>"; };
+		BC873B1220612D5B000BAF4C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BC873B1420613E72000BAF4C /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		BC873B17206140DF000BAF4C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BC873B192061415A000BAF4C /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		BC873B1C2061425D000BAF4C /* BaseMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMViewController.swift; sourceTree = "<group>"; };
+		BC873B1E20614864000BAF4C /* FrameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameViewModel.swift; sourceTree = "<group>"; };
+		BC873B2020614B8D000BAF4C /* ReadStoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadStoryViewModel.swift; sourceTree = "<group>"; };
 		BCBE26F62024BF170069D148 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		BCBE26F92024C8320069D148 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		BCBE26F92024C8320069D148 /* RemoteDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataBase.swift; sourceTree = "<group>"; };
 		BCBE26FB2024DB690069D148 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,11 +90,14 @@
 		BC7EE4B3201F9DC000492F1B /* Nano2 */ = {
 			isa = PBXGroup;
 			children = (
+				BC873B162061409D000BAF4C /* Base */,
+				BC873B1120612A97000BAF4C /* ViewModel */,
 				BCBE26F82024C8180069D148 /* Utils */,
 				BC7EE4C82020B70700492F1B /* Controller */,
 				BC7EE4C72020B70300492F1B /* View */,
 				BC7EE4C62020B6FE00492F1B /* Model */,
 				BC7EE4B4201F9DC000492F1B /* AppDelegate.swift */,
+				BC7EE4B8201F9DC000492F1B /* Main.storyboard */,
 				BC7EE4BB201F9DC000492F1B /* Assets.xcassets */,
 				BC7EE4BD201F9DC000492F1B /* LaunchScreen.storyboard */,
 				BC7EE4C0201F9DC000492F1B /* Info.plist */,
@@ -100,7 +117,13 @@
 		BC7EE4C72020B70300492F1B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC7EE4B8201F9DC000492F1B /* Main.storyboard */,
+				BC7EE4CF2020DAA600492F1B /* FrameViewController.swift */,
+				BC7EE4D52020F05E00492F1B /* ReadStoryCell.swift */,
+				BC7EE4CB2020C7C100492F1B /* LibraryCell.swift */,
+				BC7EE4C92020B73E00492F1B /* StoryViewController.swift */,
+				BC7EE4B6201F9DC000492F1B /* ViewController.swift */,
+				BC31ED3320286FF100727D5F /* HomeViewController.swift */,
+				BC7EE4CD2020D0B100492F1B /* PermissionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,22 +131,44 @@
 		BC7EE4C82020B70700492F1B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC7EE4B6201F9DC000492F1B /* ViewController.swift */,
-				BC7EE4C92020B73E00492F1B /* StoryViewController.swift */,
-				BC7EE4CB2020C7C100492F1B /* LibraryCell.swift */,
-				BC7EE4CD2020D0B100492F1B /* PermissionViewController.swift */,
-				BC7EE4CF2020DAA600492F1B /* FrameViewController.swift */,
 				BC7EE4D32020E67F00492F1B /* ReadStoryViewController.swift */,
-				BC7EE4D52020F05E00492F1B /* ReadStoryCell.swift */,
-				BC31ED3320286FF100727D5F /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC873B1120612A97000BAF4C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC873B1220612D5B000BAF4C /* ViewModel.swift */,
+				BC873B1420613E72000BAF4C /* StoryViewModel.swift */,
+				BC873B1E20614864000BAF4C /* FrameViewModel.swift */,
+				BC873B2020614B8D000BAF4C /* ReadStoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC873B162061409D000BAF4C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BC873B1B20614239000BAF4C /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BC873B1B20614239000BAF4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC873B192061415A000BAF4C /* BaseViewModelProtocol.swift */,
+				BC873B17206140DF000BAF4C /* BaseViewController.swift */,
+				BC873B1C2061425D000BAF4C /* BaseMVVMViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BCBE26F82024C8180069D148 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BCBE26F92024C8320069D148 /* UserStorage.swift */,
+				BCBE26F92024C8320069D148 /* RemoteDataBase.swift */,
 				BCBE26FB2024DB690069D148 /* ModalController.swift */,
 			);
 			path = Utils;
@@ -201,18 +246,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC873B2120614B8D000BAF4C /* ReadStoryViewModel.swift in Sources */,
 				BC7EE4D02020DAA600492F1B /* FrameViewController.swift in Sources */,
 				BCBE26FC2024DB690069D148 /* ModalController.swift in Sources */,
 				BC7EE4CA2020B73E00492F1B /* StoryViewController.swift in Sources */,
+				BC873B1520613E72000BAF4C /* StoryViewModel.swift in Sources */,
 				BC7EE4D62020F05E00492F1B /* ReadStoryCell.swift in Sources */,
-				BCBE26FA2024C8320069D148 /* UserStorage.swift in Sources */,
+				BCBE26FA2024C8320069D148 /* RemoteDataBase.swift in Sources */,
 				BC7EE4CC2020C7C100492F1B /* LibraryCell.swift in Sources */,
 				BC7EE4B7201F9DC000492F1B /* ViewController.swift in Sources */,
 				BC7EE4D42020E67F00492F1B /* ReadStoryViewController.swift in Sources */,
 				BC7EE4D22020DCDC00492F1B /* Frame.swift in Sources */,
 				BC7EE4B5201F9DC000492F1B /* AppDelegate.swift in Sources */,
 				BC7EE4CE2020D0B100492F1B /* PermissionViewController.swift in Sources */,
+				BC873B1A2061415A000BAF4C /* BaseViewModelProtocol.swift in Sources */,
+				BC873B1D2061425D000BAF4C /* BaseMVVMViewController.swift in Sources */,
 				BC31ED3420286FF100727D5F /* HomeViewController.swift in Sources */,
+				BC873B18206140DF000BAF4C /* BaseViewController.swift in Sources */,
+				BC873B1F20614864000BAF4C /* FrameViewModel.swift in Sources */,
+				BC873B1320612D5B000BAF4C /* ViewModel.swift in Sources */,
 				BCBE26F72024BF170069D148 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

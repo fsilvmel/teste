@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReadStoryViewController: UIViewController {
+final class ReadStoryViewController: BaseMVVMViewController, BaseMVVMViewControllerProtocol {
     
     // Statics
     let STORY_CELL = "storyCell"
@@ -16,22 +16,21 @@ class ReadStoryViewController: UIViewController {
     // Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // ViewModel
+    typealias MVVMProtocol = ReadStoryViewModelProtocol
+    var viewModel: MVVMProtocol!
+    
     // Variables
-    var story = [Frame]()
     var frame = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-
-        // Do any additional setup after loading the view.
+        setup()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func prevClicked(_ sender: UIButton) {
@@ -43,44 +42,47 @@ class ReadStoryViewController: UIViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
-        if frame < story.count - 1 {
+        if frame < viewModel.story.count - 1 {
             frame += 1
         }
         
         self.scrollAt()
     }
     
+    private func setup() {
+        setupCollectionView()
+    }
+    
+    func setup(with story: [Frame]) {
+        viewModel = ReadStoryViewModel(with: story)
+    }
+    
     func scrollAt() {
         let indexPath = IndexPath(item: frame, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ReadStoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    private func setupCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return story.count
+        return viewModel.story.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: STORY_CELL, for: indexPath) as! ReadStoryCell
         
-        cell.storyImage.image = story[indexPath.row].image
-        cell.storyText.text = story[indexPath.row].text
+        let story = viewModel.story[indexPath.row]
+        cell.storyImage.image = story.image
+        cell.storyText.text = story.text
         
         return cell
     }
