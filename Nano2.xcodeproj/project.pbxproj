@@ -23,7 +23,18 @@
 		BCBE26F72024BF170069D148 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F62024BF170069D148 /* Story.swift */; };
 		BCBE26FA2024C8320069D148 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26F92024C8320069D148 /* UserStorage.swift */; };
 		BCBE26FC2024DB690069D148 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE26FB2024DB690069D148 /* ModalController.swift */; };
+		C6234B3D22A6BCD4009E4A68 /* Nano2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6234B3C22A6BCD4009E4A68 /* Nano2Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6234B3F22A6BCD4009E4A68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC7EE4A9201F9DC000492F1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC7EE4B0201F9DC000492F1B;
+			remoteInfo = Nano2;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC31ED3320286FF100727D5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +55,20 @@
 		BCBE26F62024BF170069D148 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		BCBE26F92024C8320069D148 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		BCBE26FB2024DB690069D148 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
+		C6234B3A22A6BCD4009E4A68 /* Nano2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nano2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6234B3C22A6BCD4009E4A68 /* Nano2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano2Tests.swift; sourceTree = "<group>"; };
+		C6234B3E22A6BCD4009E4A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC7EE4AE201F9DC000492F1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6234B3722A6BCD4009E4A68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BC7EE4B3201F9DC000492F1B /* Nano2 */,
+				C6234B3B22A6BCD4009E4A68 /* Nano2Tests */,
 				BC7EE4B2201F9DC000492F1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				BC7EE4B1201F9DC000492F1B /* Nano2.app */,
+				C6234B3A22A6BCD4009E4A68 /* Nano2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +152,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C6234B3B22A6BCD4009E4A68 /* Nano2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C6234B3C22A6BCD4009E4A68 /* Nano2Tests.swift */,
+				C6234B3E22A6BCD4009E4A68 /* Info.plist */,
+			);
+			path = Nano2Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,19 +181,42 @@
 			productReference = BC7EE4B1201F9DC000492F1B /* Nano2.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C6234B3922A6BCD4009E4A68 /* Nano2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6234B4122A6BCD4009E4A68 /* Build configuration list for PBXNativeTarget "Nano2Tests" */;
+			buildPhases = (
+				C6234B3622A6BCD4009E4A68 /* Sources */,
+				C6234B3722A6BCD4009E4A68 /* Frameworks */,
+				C6234B3822A6BCD4009E4A68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6234B4022A6BCD4009E4A68 /* PBXTargetDependency */,
+			);
+			name = Nano2Tests;
+			productName = Nano2Tests;
+			productReference = C6234B3A22A6BCD4009E4A68 /* Nano2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BC7EE4A9201F9DC000492F1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Felipe Melo";
 				TargetAttributes = {
 					BC7EE4B0201F9DC000492F1B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+					};
+					C6234B3922A6BCD4009E4A68 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC7EE4B0201F9DC000492F1B;
 					};
 				};
 			};
@@ -179,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				BC7EE4B0201F9DC000492F1B /* Nano2 */,
+				C6234B3922A6BCD4009E4A68 /* Nano2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +247,13 @@
 				BC7EE4BF201F9DC000492F1B /* LaunchScreen.storyboard in Resources */,
 				BC7EE4BC201F9DC000492F1B /* Assets.xcassets in Resources */,
 				BC7EE4BA201F9DC000492F1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6234B3822A6BCD4009E4A68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +280,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6234B3622A6BCD4009E4A68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6234B3D22A6BCD4009E4A68 /* Nano2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6234B4022A6BCD4009E4A68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC7EE4B0201F9DC000492F1B /* Nano2 */;
+			targetProxy = C6234B3F22A6BCD4009E4A68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC7EE4B8201F9DC000492F1B /* Main.storyboard */ = {
@@ -386,6 +465,45 @@
 			};
 			name = Release;
 		};
+		C6234B4222A6BCD4009E4A68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XWMMXB4KD;
+				INFOPLIST_FILE = Nano2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.Nano2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nano2.app/Nano2";
+			};
+			name = Debug;
+		};
+		C6234B4322A6BCD4009E4A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XWMMXB4KD;
+				INFOPLIST_FILE = Nano2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.Nano2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nano2.app/Nano2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +521,15 @@
 			buildConfigurations = (
 				BC7EE4C4201F9DC000492F1B /* Debug */,
 				BC7EE4C5201F9DC000492F1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6234B4122A6BCD4009E4A68 /* Build configuration list for PBXNativeTarget "Nano2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6234B4222A6BCD4009E4A68 /* Debug */,
+				C6234B4322A6BCD4009E4A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
